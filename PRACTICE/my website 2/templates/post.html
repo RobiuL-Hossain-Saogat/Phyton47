@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <div class="container">
+    <div class="row">
+      <div class="offset-2 col-8">
+        <div class="card mt-4">
+          <div class="card-body">
+            <button class="btn btn-secondary" onclick="history.back()">Back</button>
+            <div class="card mt-3">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col"><strong>{{post[1]}}</strong></div>
+                </div>
+              </div>
+              <div class="card-body">
+                {{post[2]}} 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
