@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+        <span class="fs-4">My Website</span>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="/home" class="nav-link active" aria-current="page">Home</a></li>
+        <li class="nav-item"><a href="/home/contact" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="/home/about" class="nav-link">About</a></li>
+      </ul>
+    </header>
+  </div>
+  <h1>This is My Home page</h1>
+  <div class="row">
+    {% for detail in website %}
+      <div class="col-md-4" style=" width: 18rem;">
+        <div class="card" style=" margin: 20px 0;">
+          <img src="{{detail.image_url}}" alt="photo">
+          <div class="card-body text-center">
+            <img src="#" class="card-img-top" alt="">
+            <h4 class="card-little">{{detail.name}}</h4>
+            <p class="card-text">{{detail.mobile_number}}</p>
+            <p class="card-text">{{detail.address}}</p>
+            <p class="card-text">{{detail.email}}</p>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock  %}
